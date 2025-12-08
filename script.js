@@ -10,9 +10,10 @@ const fruits = ["りんご","バナナ","みかん"];
 console.log(fruits[0]); //りんご
 console.log(fruits[2]); //みかん
 
-const person = {name:"轟三郎", age: x , hobby: "x"};
+const person = {name:"轟三郎", age: "x" , hobby: "x"};
 console.log(person.name); 
 console.log(person.hobby); 
 
-function showData() {document.getElementById("dataArea").textContent =
+function showData() {
+    document.getElementById("dataArea").textContent =
     person.name + "(趣味：" + person.hobby +") " ; }

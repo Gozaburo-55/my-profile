@@ -17,3 +17,7 @@ console.log(person.hobby);
 function showData() {
     document.getElementById("dataArea").textContent =
     person.name + "(趣味：" + person.hobby +") " ; }
+
+function changeColor()
+    {const text = document.getElementById("colorText");
+    text.style.color = "red"; }

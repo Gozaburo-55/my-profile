@@ -10,7 +10,7 @@ const fruits = ["りんご","バナナ","みかん"];
 console.log(fruits[0]); //りんご
 console.log(fruits[2]); //みかん
 
-const person = {name:"轟三郎", age: "x" , hobby: "x"};
+const person = {name:"轟三郎", age: 100 , hobby: "x"};
 console.log(person.name); 
 console.log(person.hobby); 
 

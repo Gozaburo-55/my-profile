@@ -8,7 +8,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_orgins=["*"],     # どのオリジンからでもOK
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],    #GET,POSTなど全部OK
     allow_headers=["*"],    # 全ヘッダーOK
 )

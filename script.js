@@ -66,3 +66,26 @@ async function sendCalorie() {
         `推定消費カロリー：${data.calories} kcal`;
 
 }
+
+// 「攻撃！」ボタンにイベント登録
+document.getElementById("attackButton").addEventListener("click", sendAttack);
+
+// 攻撃APIにデータを送る関数
+async function sendAttack() {
+    const attack = Number(document.getElementById("attackInput").value);
+    const defense = Number(document.getElementById("defenseInput").value);
+
+    if (!attack || !defense) {
+        document.getElementById("attackResult").textContent = "攻撃力と防御力を入れてね";
+        return;
+    }
+
+    const response = await fetch("http://127.0.0.1:8000/attack", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ attack: attack, defense: defense })
+    });
+
+    const data = await response.json();
+    document.getElementById("attackResult").textContent = data.message;
+}

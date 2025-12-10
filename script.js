@@ -21,3 +21,6 @@ function showData() {
 function changeColor()
     {const text = document.getElementById("colorText");
     text.style.color = "red"; }
+
+document.getElementById("eventBtn").addEventListener("click",function() 
+    {document.getElementById("eventMsg").textContent = "イベントで変わったよ！"; });

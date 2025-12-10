@@ -41,3 +41,28 @@ async function sendName() {
     const data = await response.json();
     document.getElementById("apiResult").textContent = data.message;
 }
+
+// 「計算する」ボタンにイベントを登録
+document.getElementById("calcButton").addEventListener("click", sendCalorie);
+
+// カロリー計算APIにデータを送る関数
+async function sendCalorie() {
+    const weight = Number(document.getElementById("weightInput").value);
+    const minutes = Number(document.getElementById("timeInput").value);
+
+    //入力チェック（何も入ってないとき用）
+    if (!weight || !minutes) {
+        document.getElementById("calorieResult").textContent = "体重と時間を数字で入れてね";
+        return;}
+    
+    const response = await fetch("http://127.0.0.1:8000/calculate-calorie",{
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ weight: weight, minutes: minutes})
+    });
+
+    const data = await response.json();
+    document.getElementById("calorieResult").textContent =
+        `推定消費カロリー：${data.calories} kcal`;
+
+}

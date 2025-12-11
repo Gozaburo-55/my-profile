@@ -27,7 +27,7 @@ function greet(age) {
     if (age => 20)
         return "大人ですね！";
 
-    if (age <= 19)
+    else 
         return "子どもですね！";
 }
 

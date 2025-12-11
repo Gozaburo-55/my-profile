@@ -29,12 +29,14 @@ const characters = [
 ];
 
 for (let i = 0; i < characters.length; i++) {
-    console.log(characters[i].name + " の攻撃力：" + characters[i].attack);
+    console.log(characters[i].name + " の攻撃力：" + characters[i].attack);  
+     if (characters[i].attack >= 30) 
+        {console.log(characters[i].name +"は攻撃力30以上！");}}
+
+let total = 0;
+
+for(let i = 0; i < characters.length; i++) {
+    total = total + characters[i].hp;
 }
 
-if (characters[i].attack >= 30) {
-    console.log(characters[i].name);}
-
-for(let total = 0; i < characters.length; i++) 
-    {console.log(total = total + characters[i].hp);}
-
+console.log("全キャラのHP合計:", total);

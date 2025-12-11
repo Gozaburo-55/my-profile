@@ -38,5 +38,5 @@ if (characters[i].attack >= 30) {
 for(let total = 0; i < characters.length; i++) 
     {total = total + characters[i].hp;}
 
-console.log(hpsum);
+console.log(total);
 

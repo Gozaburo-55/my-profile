@@ -26,7 +26,7 @@ const person = {
 //person.name → "轟三郎"
 
 //テンプレート文字列
-const message = 'こんにちは、${person.name}さん！';
+const message = `こんにちは、${person.name}さん！`;
 //「文字の中に変数を埋め込む」
 
 console.log(message);

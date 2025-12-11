@@ -21,3 +21,16 @@ function introduce2(name, age) {
 
 const message2 = introduce2("たけし", 30);
 console.log(message2);
+
+
+function greet(age) {
+    if (age => 20)
+        return "大人ですね！";
+
+    if (age <= 19)
+        return "子どもですね！";
+}
+
+console.log(greet(10));  // → 子どもですね！
+console.log(greet(20));  // → 大人ですね！
+

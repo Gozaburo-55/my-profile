@@ -17,3 +17,7 @@ function createCharacter(name,hp,attack){
 
 const hero = createCharacter("轟三郎",100,30);
 console.log(hero)
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}

@@ -33,10 +33,8 @@ for (let i = 0; i < characters.length; i++) {
 }
 
 if (characters[i].attack >= 30) {
-    console.log(characters[i].name)}
+    console.log(characters[i].name);}
 
 for(let total = 0; i < characters.length; i++) 
-    {total = total + characters[i].hp;}
-
-console.log(total);
+    {console.log(total = total + characters[i].hp);}
 

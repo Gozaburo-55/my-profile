@@ -24,11 +24,11 @@ console.log(message2);
 
 
 function greet(age) {
-    if (age => 20)
-        return "大人ですね！";
+    if (age >= 20){
+        return "大人ですね！";}
 
-    else 
-        return "子どもですね！";
+    else{ 
+        return "子どもですね！";}
 }
 
 console.log(greet(10));  // → 子どもですね！

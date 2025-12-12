@@ -7,16 +7,14 @@ btn.addEventListener("click",function(){
     msg.textContent = "ボタンが押されたよ！"
 });
 
-let isRed = false;
-
-btn.addEventListener("click", function(){
+let isRed = false; 
+btn.addEventListener("click", function(){ 
     if(isRed){
         msg.style.color = "black";
-        isRed = false;
-    } else{
-        msg.style.color = "red";
-        isRed = true;
-    }
+        isRed = false; 
+    } else{ msg.style.color = "red"; 
+        isRed = true; 
+    } 
 })
 
 const secret = document.getElementById("secret");
@@ -28,4 +26,22 @@ toggle.addEventListener("click",function(){
     } else{
         secret.style.display = "none";
     } 
+});
+
+
+const colors = ["red", "blue", "green"];
+let colorIndex = 0;
+
+btn.addEventListener("click", function() {
+
+    // 色を1つ進める
+    colorIndex++;
+
+    // 3色を超えたら0に戻す
+    if (colorIndex >= colors.length) {
+        colorIndex = 0;
+    }
+
+    // 色を変更
+    msg.style.color = colors[colorIndex];
 });

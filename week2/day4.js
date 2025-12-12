@@ -18,3 +18,14 @@ btn.addEventListener("click", function(){
         isRed = true;
     }
 })
+
+const secret = document.getElementById("secret");
+const toggle = document.getElementById("toggle");
+
+toggle.addEventListener("click",function(){
+    if (secret.style.display === "none"){
+        secret.style.display = "block";
+    } else{
+        secret.style.display = "none";
+    } 
+});

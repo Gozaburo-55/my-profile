@@ -6,7 +6,7 @@ const result = document.getElementById("result");
 sendBtn.addEventListener("click",async function(){
     const name = input.value;
 
-    const response = await fetch("http/127.0.0.1:8000/hello",{
+    const response = await fetch("http://127.0.0.1:8000/hello",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

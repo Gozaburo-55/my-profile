@@ -9,7 +9,7 @@ sendBtn.addEventListener("click",async function(){
 
     if(!name||!job){
         result.textContent = "名前・職業を入力してね！";
-        return
+        return;
     }
 
     const response = await fetch ("http://127.0.0.1:8000/profile",{

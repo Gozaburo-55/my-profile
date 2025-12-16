@@ -4,8 +4,8 @@ const sendBtn = document.getElementById("sendBtn");
 const result = document.getElementById("result");
 
 sendBtn.addEventListener("click",async function(){
-    const name = nameInput.Value
-    const job = jobInput.Value
+    const name = nameInput.value
+    const job = jobInput.value
 
     if(!name||!job){
         result.textContent = "名前・職業を入力してね！";

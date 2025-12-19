@@ -12,7 +12,7 @@ calcBtn.addEventListener("click", function () {
     const kg = Number(kgInput.value)//kg
 
     const heightM = height/100
-    const calcresult = kg/heightM^2
+    const calcresult = kg/(heightM*heightM)
 
     result.textContent = `あなたのBMIは${calcresult}です！`;
 });

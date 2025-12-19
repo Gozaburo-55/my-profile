@@ -23,23 +23,18 @@ calcBtn.addEventListener("click", function () {
     
     if (bmi < 18.5){
         bmiText = "痩せ（BMI<18.5)";
-    bmiText.style.color = "blue"}
+        bmiText.style.color = "blue"}
     else if (bmi < 25){
         bmiText = "標準（18.5≦BMI<25）";
-    bmiText.style.color = "green"}
+        bmiText.style.color = "green"}
     else if (bmi < 30){
         bmiText = "肥満（25≦BMI<30）";
-    bmiText.style.color = "orange"}
+        bmiText.style.color = "orange"}
     else if (bmi >= 30){
         bmiText = "高度肥満（30≦BMI）";
-    bmiText.style.color = "red"}
+        bmiText.style.color = "red"}
     
-    //身長・体重が入力されていなかった場合
-    if (!height ||!kg){
-        BMIjudge.textContent="身長と体重を入力してください！";
-        bmiText.style.color = "red"
-        return;
-    }
+
 
     
     //結果出力
@@ -49,7 +44,14 @@ calcBtn.addEventListener("click", function () {
     `あなたのBMIは${bmi.toFixed(1)}です！`; //BMI
     BMIjudge.textContent = 
     `判定：${bmiText}`; //判定結果
-     
+
+
+         //身長・体重が入力されていなかった場合
+    if (!height ||!kg){
+        BMIjudge.textContent="身長と体重を入力してください！";
+        bmiText.style.color = "red"
+        return;}
+
 });
 
 

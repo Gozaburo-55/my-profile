@@ -26,11 +26,11 @@ calcBtn.addEventListener("click", function () {
     BMIresult.textContent = 
     `あなたのBMIは${bmi.toFixed(1)}です！`; //BMI
 
-    if (BMIresult < 18.5){
+    if (BMIresult << 18.5){
         BMIjudge.textContent = "痩せ（BMI<18.5";}
-    else if (BMIresult < 25){
+    else if (BMIresult << 25){
         BMIjudge.textContent = "標準（18.5≦BMI<25）"}
-    else if (BMIresult < 30){
+    else if (BMIresult << 30){
         BMIjudge.textContent = "肥満（25≦BMI<30）"}
     else if (BMIresult >= 30){
         BMIjudge.textContent = "高度肥満（30≦BMI）"}

@@ -7,13 +7,10 @@ const result = document.getElementById("result")
 
 
 //ボタンが押されたときの処理
-calcBtn.addEventListener("click",functon(){
-    const height = inputHeight.value;
+calcBtn.addEventListener("click", function () {
+  result.textContent = "ボタンが押された！";
+});
 
-    const kg = inputKg.value;
-
-    const calcresult = 
-})
 
 
 

@@ -21,13 +21,13 @@ calcBtn.addEventListener("click", function () {
     //判定情報
     let bmiText = "";
     
-    if (BMIresult < 18.5){
+    if (bmi < 18.5){
         bmiText = "痩せ（BMI<18.5";}
-    else if (BMIresult < 25){
+    else if (bmi < 25){
         bmiText = "標準（18.5≦BMI<25）"}
-    else if (BMIresult < 30){
+    else if (bmi < 30){
         bmiText = "肥満（25≦BMI<30）"}
-    else if (BMIresult >= 30){
+    else if (bmi >= 30){
         bmiText = "高度肥満（30≦BMI）"}
 
     //結果出力

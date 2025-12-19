@@ -20,7 +20,7 @@ calcBtn.addEventListener("click", function () {
     const bmi = kg/(heightM*heightM)
 
     //結果出力
-    weightresult.textContent = `あなたの適正体重は${weightT.toFixed(1)}です！`; //適正体重
+    weightresult.textContent = `あなたの適正体重は${weightT.toFixed(1)}kgです！`; //適正体重
     BMIresult.textContent = `あなたのBMIは${bmi.toFixed(1)}です！`; //BMI
 });
 

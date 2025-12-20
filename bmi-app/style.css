@@ -1,0 +1,9 @@
+/*判定の色*/
+*judge-under{ color: blue;}
+*judge-normal{ color: green;}
+*judge-over{ color: orange;}
+*judge-obese{ color: red;}
+
+/*見やすくする（任意）*/
+#BMIjudge { font-weight: bold;}
+#advice {margin-top: 8px; }

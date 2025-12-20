@@ -5,6 +5,7 @@ const calcBtn =document.getElementById("calcBtn")
 const BMIresult = document.getElementById("BMIresult")
 const BMIjudge = document.getElementById("BMIjudge")
 const weightresult = document.getElementById("weightresult")
+const advice =document.getElementById("advice")
 
 //ボタンが押されたときの処理
 calcBtn.addEventListener("click", function () {
@@ -20,22 +21,35 @@ calcBtn.addEventListener("click", function () {
 
     //判定情報
     let bmiText = "";
-    
+    let bmiClass = "";
+    let adviceText = "";
+
+
     if (bmi < 18.5){
         bmiText = "痩せ（BMI<18.5)";
-        BMIjudge.style.color = "blue"}
+        bmiClass = "judge-under";//cssで色替えするためのラベル
+        //BMIjudge.style.color = "blue" //jsのみで色変えする場合
+        adviceText = "まずは食事量を少し増やして、筋トレ＋睡眠で体重を安定させよう。";
+
+        }
     else if (bmi < 25){
         bmiText = "標準（18.5≦BMI<25）";
-        BMIjudge.style.color = "green"}
+        bmiClass ="judge-normal";
+        //BMIjudge.style.color = "green"
+        adviceText = "いい感じ！週2-3回の運動で体重を維持しよう。";
+        }
     else if (bmi < 30){
         bmiText = "肥満（25≦BMI<30）";
-        BMIjudge.style.color = "orange"}
+        bmiClass = "judge-over";
+        //BMIjudge.style.color = "orange"
+        adviceText ="まずは「毎日＋10分歩く」＋間食の見直しから。無理なく落とそう。";
+        }
     else if (bmi >= 30){
         bmiText = "高度肥満（30≦BMI）";
-        BMIjudge.style.color = "red"}
-    
-
-
+        bmiClass = "judge-obese";
+        //BMIjudge.style.color = "red"
+        adviceText ="急に頑張らず、生活習慣を小さく変えるのが最優先。体調不安があれば専門家も検討。"
+        }    
     
     //結果出力
     weightresult.textContent = 
@@ -44,6 +58,9 @@ calcBtn.addEventListener("click", function () {
     `あなたのBMIは${bmi.toFixed(1)}です！`; //BMI
     BMIjudge.textContent = 
     `判定：${bmiText}`; //判定結果
+    BMIjudge.classList.add(judgeClass);
+
+    advice.textContent = `アドバイス：${adviceText}`
 
 
          //身長・体重が入力されていなかった場合

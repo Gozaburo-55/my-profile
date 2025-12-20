@@ -58,7 +58,7 @@ calcBtn.addEventListener("click", function () {
     `あなたのBMIは${bmi.toFixed(1)}です！`; //BMI
     BMIjudge.textContent = 
     `判定：${bmiText}`; //判定結果
-    BMIjudge.classList.add(judgeClass);
+    BMIjudge.classList.add(bmiClass);
 
     advice.textContent = `アドバイス：${adviceText}`
 
